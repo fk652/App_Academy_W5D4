@@ -30,6 +30,8 @@ class ShortenedUrl < ApplicationRecord
     generate_short_url if new_record?
   end
 
+  
+
   private 
   def generate_short_url
     self.short_url = ShortenedUrl.random_code if !self.short_url
